@@ -1,7 +1,7 @@
 # vue-photo-zoomer
 
 [![Build Status](https://www.travis-ci.org/YuChenLi923/vue-photo-zoomer.svg?branch=master)](https://www.travis-ci.org/YuChenLi923/vue-photo-zoomer)
-[![Coverage Status](https://coveralls.io/repos/github/YuChenLi923/vue-photo-zoomer/badge.svg?branch=master)](https://coveralls.io/github/YuChenLi923/vue-photo-zoomer?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/YuChenLi923/vue-photo-zoomer/badge.svg?branch=develop)](https://coveralls.io/github/YuChenLi923/vue-photo-zoomer?branch=develop)
 
 基于vue2.x设计的图片放大镜组件。
 
