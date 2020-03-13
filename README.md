@@ -3,6 +3,8 @@
 [![Build Status](https://www.travis-ci.org/YuChenLi923/vue-photo-zoomer.svg)](https://www.travis-ci.org/YuChenLi923/vue-photo-zoomer)
 
 [![Coverage Status](https://coveralls.io/repos/github/YuChenLi923/vue-photo-zoomer/badge.svg)](https://coveralls.io/github/YuChenLi923/vue-photo-zoomer) 
+[![license](https://img.shields.io/badge/license-MIT-brightgreen.svg)](https://mit-license.org/) 
+[![language](https://img.shields.io/badge/language-Vue2-brightgreen.svg)](https://www.npmjs.com/package/v-viewer)
 
 基于vue2.x设计的图片放大镜组件。
 
@@ -55,6 +57,5 @@ export default {
  `url` | 图片的URL | String | -
  `urlFull` | 放大后的图片URL  | String | `url`
  `scale` | 放大倍数 | Number | 2
- `unit` | 计算单位 | String | `'px'`
  `magnifierStyle` | 放大镜的样式 | Object | -  
  `viewerStyle` | 观察区域的样式 | Object | -

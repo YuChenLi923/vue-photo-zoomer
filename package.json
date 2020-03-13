@@ -1,6 +1,6 @@
 {
   "name": "vue-photo-zoomer",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "main": "./dist/vue-photo-zoomer.umd.js",
   "scripts": {

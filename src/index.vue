@@ -65,10 +65,6 @@ export default {
       type: Number,
       default: 2
     },
-    unit: {
-      type: String,
-      default: 'px'
-    },
     test: { // 用于单元测试
       type: Boolean,
       default: () => false
@@ -81,7 +77,8 @@ export default {
       zoomerPos: {},
       magnifierSize: {},
       viewerSize: {},
-      viewerImgStyle: {}
+      viewerImgStyle: {},
+      unit: 'px'
     }
   },
   mounted () {
