@@ -1,0 +1,12 @@
+language: node_js
+env:
+  - COVERAGE=true
+addons:
+  chrome: stable
+install:
+ - npm install
+node_js:
+  - "8.9.0"
+script:
+  - npm run build
+  - npm run test
