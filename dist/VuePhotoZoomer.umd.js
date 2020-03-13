@@ -4,9 +4,9 @@
 	else if(typeof define === 'function' && define.amd)
 		define([], factory);
 	else if(typeof exports === 'object')
-		exports["vue-photo-zoomer"] = factory();
+		exports["VuePhotoZoomer"] = factory();
 	else
-		root["vue-photo-zoomer"] = factory();
+		root["VuePhotoZoomer"] = factory();
 })((typeof self !== 'undefined' ? self : this), function() {
 return /******/ (function(modules) { // webpackBootstrap
 /******/ 	// The module cache

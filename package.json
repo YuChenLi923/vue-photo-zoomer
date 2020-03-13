@@ -5,7 +5,7 @@
   "main": "./dist/vue-photo-zoomer.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-photo-zoomer src/index.vue --formats umd",
+    "build": "vue-cli-service build --target lib --name VuePhotoZoomer src/index.vue --formats umd",
     "test": "karma start",
     "lint": "vue-cli-service lint"
   },
