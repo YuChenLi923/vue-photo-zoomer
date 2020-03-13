@@ -41,7 +41,7 @@ export default {
 </style>
 
 ```
-[示例](https://yuchenli923.github.io/vue-photo-zoomer/dist/demo.html)
+[示例](https://yuchenli923.github.io/vue-photo-zoomer/demo/index.html)
 
 ## API
 

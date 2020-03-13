@@ -1,6 +1,6 @@
 <template>
   <div class="demo">
-    <h1  class="demo-title">DEMO</h1>
+    <h1 class="demo-title">DEMO</h1>
     <div class="zoomer-x">
       <VuePhotoZoomer
         :url="demoImg"
