@@ -1,8 +1,15 @@
 <template>
-  <div class="zoomer-x">
-    <VuePhotoZoomer
-      :url="demoImg"
-    />
+  <div class="demo">
+    <h1  class="demo-title">DEMO</h1>
+    <div class="zoomer-x">
+      <VuePhotoZoomer
+        :url="demoImg"
+        :zoomerStyle="{
+          width: '100%',
+          height: '100%'
+        }"
+      />
+    </div>
   </div>
 </template>
 
@@ -22,9 +29,13 @@ export default {
 }
 </script>
 <style>
+.demo-title {
+  text-align: center;
+}
 .zoomer-x {
-  width: 300px;
+  width: 530px;
   height: 300px;
-  margin: 40px;
+  margin: auto;
+  margin-top: 100px;
 }
 </style>

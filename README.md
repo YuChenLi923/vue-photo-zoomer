@@ -5,6 +5,43 @@
 
 ## DEMO
 
+```vue
+<template>
+    <div class="zoomer-x">
+        <VuePhotoZoomer
+            :url="demoImg"
+            :zoomerStyle="{
+            width: '100%',
+            height: '100%'
+            }"
+        />
+    </div>
+</template>
+
+<script>
+import VuePhotoZoomer from './index.vue'
+import demoImg from './assets/demo.jpg'
+export default {
+  name: 'App',
+  components: {
+    VuePhotoZoomer
+  },
+  data () {
+    return {
+      demoImg
+    }
+  }
+}
+</script>
+<style>
+.zoomer-x {
+  width: 530px;
+  height: 300px;
+}
+</style>
+
+```
+[示例](https://yuchenli923.github.io/vue-photo-zoomer/dist/demo.html)
 
 ## API
 
