@@ -8,7 +8,8 @@
     "build": "vue-cli-service build --target lib --name VuePhotoZoomer src/index.vue --formats umd",
     "demo": "vue-cli-service build --dest ./demo",
     "test": "karma start",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "help": "vue-cli-service -h"
   },
   "dependencies": {
     "core-js": "^3.6.4",
