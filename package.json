@@ -1,8 +1,8 @@
 {
   "name": "vue-photo-zoomer",
-  "version": "0.1.1",
-  "private": true,
+  "version": "0.1.0",
   "main": "./dist/VuePhotoZoomer.umd.js",
+  "description": "基于vue2.x设计的图片放大镜组件。",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name VuePhotoZoomer src/index.vue --formats umd",
@@ -10,6 +10,28 @@
     "test": "karma start",
     "lint": "vue-cli-service lint"
   },
+  "author": "YuChenLi923<liyc_code@163.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/YuChenLi923/vue-photo-zoomer"
+  },
+  "bugs": {
+    "url": "https://github.com/YuChenLi923/vue-photo-zoomer/issues",
+    "email": "liyc_code@163.com"
+  },
+  "keywords": [
+    "vue",
+    "zoomer",
+    "photo",
+    "picture",
+    "vue-zoomer",
+    "vue-picture",
+    "vue-photo",
+    "vue-picture-zoomer",
+    "vue-photo-zoomer",
+    "yc"
+  ],
   "dependencies": {
     "core-js": "^3.6.4",
     "vue": "^2.6.11"
