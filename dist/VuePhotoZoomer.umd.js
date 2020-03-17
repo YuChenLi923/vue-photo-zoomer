@@ -1267,14 +1267,14 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7136422c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/index.vue?vue&type=template&id=12ef1127&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"72c3ab73-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/index.vue?vue&type=template&id=212754c8&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"zoomer",staticClass:"vue-photo-zoomer",style:(_vm.zoomerStyle),on:{"mouseenter":_vm.onMouseenter,"mousemove":_vm.onMousemove,"mouseleave":function($event){_vm.visiable = false}}},[_c('img',{staticClass:"vue-photo-zoomer_image",attrs:{"src":_vm.url}}),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.visiable),expression:"visiable"}],ref:"magnifier",staticClass:"vue-photo-zoomer_magnifier",style:(Object.assign({}, _vm.magnifierStyle,
          _vm.magnifierPos))}),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.visiable),expression:"visiable"}],staticClass:"vue-photo-zoomer_viewer",style:(Object.assign({}, _vm.viewerStyle,
       _vm.viewerSize))},[_c('img',{staticClass:"vue-photo-zoomer_viewer_image",style:(_vm.viewerImgStyle),attrs:{"src":_vm.urlFull || _vm.url}})])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/index.vue?vue&type=template&id=12ef1127&
+// CONCATENATED MODULE: ./src/index.vue?vue&type=template&id=212754c8&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
 var es_number_constructor = __webpack_require__("a9e3");
@@ -1351,10 +1351,6 @@ var es_number_constructor = __webpack_require__("a9e3");
       type: Number,
       default: 2
     },
-    unit: {
-      type: String,
-      default: 'px'
-    },
     test: {
       // 用于单元测试
       type: Boolean,
@@ -1373,7 +1369,8 @@ var es_number_constructor = __webpack_require__("a9e3");
       zoomerPos: {},
       magnifierSize: {},
       viewerSize: {},
-      viewerImgStyle: {}
+      viewerImgStyle: {},
+      unit: 'px'
     };
   },
   mounted: function mounted() {

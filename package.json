@@ -2,7 +2,7 @@
   "name": "vue-photo-zoomer",
   "version": "0.1.1",
   "private": true,
-  "main": "./dist/vue-photo-zoomer.umd.js",
+  "main": "./dist/VuePhotoZoomer.umd.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name VuePhotoZoomer src/index.vue --formats umd",
