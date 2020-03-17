@@ -1,6 +1,5 @@
 <template>
   <div class="vue-photo-zoomer"
-       :style="zoomerStyle"
        @mouseenter="onMouseenter"
        @mousemove="onMousemove"
        @mouseleave="visiable = false"
@@ -8,6 +7,8 @@
     <img
       class="vue-photo-zoomer_image"
       :src="url"
+      ref="img"
+      @load="onLoadImage"
     />
     <div class="vue-photo-zoomer_magnifier"
          v-show="visiable"
@@ -54,13 +55,6 @@ export default {
         height: '100px'
       })
     },
-    zoomerStyle: {
-      type: Object,
-      default: () => ({
-        width: '100px',
-        height: '100px'
-      })
-    },
     scale: {
       type: Number,
       default: 2
@@ -80,14 +74,6 @@ export default {
       viewerImgStyle: {},
       unit: 'px'
     }
-  },
-  mounted () {
-    const zoomerPos = this.$refs.zoomer.getBoundingClientRect()
-    this.zoomerPos = zoomerPos
-    this.viewerImgStyle.width = zoomerPos.width * this.scale +
-                                this.unit
-    this.viewerImgStyle.height = zoomerPos.height * this.scale +
-                                 this.unit
   },
   methods: {
     setMagnifierPos (e) {
@@ -127,6 +113,16 @@ export default {
       if (!this.visiable) {
         this.visiable = true
       }
+    },
+    onLoadImage () {
+      const zoomerPos = this.$refs.zoomer.getBoundingClientRect()
+      const image = this.$refs.img
+      this.zoomerPos = zoomerPos
+      this.viewerImgStyle.width = image.offsetWidth * this.scale +
+                                  this.unit
+      this.viewerImgStyle.height = image.offsetHeight * this.scale +
+                                  this.unit
+      this.viewerSize.background = getComputedStyle(this.$refs.zoomer).background
     }
   }
 }

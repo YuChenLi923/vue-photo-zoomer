@@ -13,15 +13,14 @@
 
 ```vue
 <template>
-    <div class="zoomer-x">
-        <VuePhotoZoomer
-            :url="demoImg"
-            :zoomerStyle="{
-            width: '100%',
-            height: '100%'
-            }"
-        />
-    </div>
+  <div class="zoomer-x">
+    <VuePhotoZoomer
+      :url="demoImg"
+      :style="{
+        width: '500px'
+      }"
+    />
+  </div>
 </template>
 
 <script>
@@ -41,8 +40,7 @@ export default {
 </script>
 <style>
 .zoomer-x {
-  width: 530px;
-  height: 300px;
+  text-align: center;
 }
 </style>
 
@@ -57,5 +55,5 @@ export default {
  `url` | 图片的URL | String | -
  `urlFull` | 放大后的图片URL  | String | `url`
  `scale` | 放大倍数 | Number | 2
- `magnifierStyle` | 放大镜的样式 | Object | -  
  `viewerStyle` | 观察区域的样式 | Object | -
+ `magnifierStyle` | 放大镜的样式 | Object | -

@@ -4,9 +4,8 @@
     <div class="zoomer-x">
       <VuePhotoZoomer
         :url="demoImg"
-        :zoomerStyle="{
-          width: '100%',
-          height: '100%'
+        :style="{
+          width: '500px'
         }"
       />
     </div>
@@ -33,9 +32,7 @@ export default {
   text-align: center;
 }
 .zoomer-x {
-  width: 530px;
-  height: 300px;
-  margin: auto;
   margin-top: 100px;
+  text-align: center;
 }
 </style>
