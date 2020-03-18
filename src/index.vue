@@ -83,10 +83,17 @@ export default {
       magnifierSize: {},
       viewerSize: {},
       viewerImgStyle: {},
+      preMousePos: null,
       unit: 'px',
       loading: true,
       loadingIcon
     }
+  },
+  mounted () {
+    window.addEventListener('resize', this.onResize)
+  },
+  destroyed () {
+    window.removeEventListener('resize', this.onResize)
   },
   methods: {
     setMagnifierPos (e) {
@@ -98,6 +105,7 @@ export default {
       } = this
       const pageY = this.test ? (e._pageY || e.pageY) : e.pageY
       const pageX = this.test ? (e._pageX || e.pageX) : e.pageX
+      this.preMousePos = { pageY, pageX }
       let top = pageY - zoomerPos.top - magnifierSize.height / 2
       let left = pageX - zoomerPos.left - magnifierSize.width / 2
       top = Math.min(Math.max(0, top), zoomerPos.height - magnifierSize.height)
@@ -116,6 +124,12 @@ export default {
         width: magnifier.width * this.scale + this.unit,
         height: magnifier.height * this.scale + this.unit
       }
+    },
+    setZoomerPos () {
+      this.zoomerPos = this.$refs.zoomer.getBoundingClientRect()
+    },
+    onResize (e) {
+      this.setZoomerPos()
     },
     onMouseenter (e) {
       if (this.loading) {
@@ -140,15 +154,14 @@ export default {
       }
     },
     onLoadImage () {
-      const zoomerPos = this.$refs.zoomer.getBoundingClientRect()
       const image = this.$refs.img
       this.loading = false
-      this.zoomerPos = zoomerPos
       this.viewerImgStyle.width = image.offsetWidth * this.scale +
                                   this.unit
       this.viewerImgStyle.height = image.offsetHeight * this.scale +
                                   this.unit
       this.viewerSize.background = getComputedStyle(this.$refs.zoomer).background
+      this.setZoomerPos()
     }
   }
 }
