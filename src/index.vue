@@ -10,6 +10,16 @@
       ref="img"
       @load="onLoadImage"
     />
+    <div class="vue-photo-zoomer_loading"
+         v-if="loading">
+      <slot name="loading">
+        <div class="vue-photo-zoomer_loading_x">
+          <img :src="loadingIcon"
+               class="vue-photo-zoomer_loading_icon"
+          />
+        </div>
+      </slot>
+    </div>
     <div class="vue-photo-zoomer_magnifier"
          v-show="visiable"
          :style="{
@@ -34,6 +44,7 @@
 </template>
 
 <script>
+import loadingIcon from './assets/loading.gif'
 export default {
   props: {
     url: {
@@ -72,7 +83,9 @@ export default {
       magnifierSize: {},
       viewerSize: {},
       viewerImgStyle: {},
-      unit: 'px'
+      unit: 'px',
+      loading: true,
+      loadingIcon
     }
   },
   methods: {
@@ -96,27 +109,40 @@ export default {
       this.viewerImgStyle.marginTop = -top * scale + unit
       this.viewerImgStyle.marginLeft = -left * scale + unit
     },
+    setviewerSize () {
+      const magnifier = this.$refs.magnifier.getBoundingClientRect()
+      this.magnifierSize = magnifier
+      this.viewerSize = {
+        width: magnifier.width * this.scale + this.unit,
+        height: magnifier.height * this.scale + this.unit
+      }
+    },
     onMouseenter (e) {
+      if (this.loading) {
+        return
+      }
       this.setMagnifierPos(e)
       this.visiable = true
       this.$nextTick(() => {
-        const magnifier = this.$refs.magnifier.getBoundingClientRect()
-        this.magnifierSize = magnifier
-        this.viewerSize = {
-          width: magnifier.width * this.scale + this.unit,
-          height: magnifier.height * this.scale + this.unit
-        }
+        this.setviewerSize()
       })
     },
     onMousemove (e, options) {
+      if (this.loading) {
+        return
+      }
       this.setMagnifierPos(e)
       if (!this.visiable) {
         this.visiable = true
+        this.$nextTick(() => {
+          this.setviewerSize()
+        })
       }
     },
     onLoadImage () {
       const zoomerPos = this.$refs.zoomer.getBoundingClientRect()
       const image = this.$refs.img
+      this.loading = false
       this.zoomerPos = zoomerPos
       this.viewerImgStyle.width = image.offsetWidth * this.scale +
                                   this.unit
