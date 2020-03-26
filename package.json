@@ -1,6 +1,6 @@
 {
   "name": "vue-photo-zoomer",
-  "version": "0.2.0",
+  "version": "0.2.2",
   "main": "./dist/VuePhotoZoomer.umd.js",
   "description": "基于vue2.x设计的图片放大镜组件。",
   "scripts": {
