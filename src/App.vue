@@ -3,10 +3,7 @@
     <h1 class="demo-title">DEMO</h1>
     <div class="zoomer-x">
       <VuePhotoZoomer
-        :url="demoImg"
-        :style="{
-          width: '500px'
-        }"
+        :url="url"
       />
     </div>
   </div>
@@ -22,7 +19,8 @@ export default {
   },
   data () {
     return {
-      demoImg
+      demoImg,
+      url: 'https://1cm.hk.chinamobile.com/images/onlineshop/product/8c23ac7f2a2168e150002174dfe3e478.jpg'
     }
   }
 }

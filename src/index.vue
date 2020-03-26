@@ -13,11 +13,6 @@
     <div class="vue-photo-zoomer_loading"
          v-if="loading">
       <slot name="loading">
-        <div class="vue-photo-zoomer_loading_x">
-          <img :src="loadingIcon"
-               class="vue-photo-zoomer_loading_icon"
-          />
-        </div>
       </slot>
     </div>
     <div class="vue-photo-zoomer_magnifier"
@@ -44,7 +39,6 @@
 </template>
 
 <script>
-import loadingIcon from './assets/loading.gif'
 export default {
   props: {
     url: {
@@ -85,8 +79,7 @@ export default {
       viewerImgStyle: {},
       preMousePos: null,
       unit: 'px',
-      loading: true,
-      loadingIcon
+      loading: true
     }
   },
   mounted () {
@@ -126,7 +119,13 @@ export default {
       }
     },
     setZoomerPos () {
-      this.zoomerPos = this.$refs.zoomer.getBoundingClientRect()
+      const zoomerRect = this.$refs.zoomer.getBoundingClientRect()
+      this.zoomerPos = {
+        height: zoomerRect.height,
+        width: zoomerRect.width,
+        top: zoomerRect.top + window.pageYOffset,
+        left: zoomerRect.left + window.pageXOffset
+      }
     },
     onResize (e) {
       this.setZoomerPos()

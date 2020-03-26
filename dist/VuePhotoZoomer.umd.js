@@ -307,7 +307,7 @@ function toComment(sourceMap) {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".vue-photo-zoomer{display:inline-block;position:relative;font-size:0;background-color:#efefef}.vue-photo-zoomer_loading{width:100%;height:100%;position:absolute;top:0;left:0}.vue-photo-zoomer_loading_x{width:100%;height:100%;background:hsla(0,0%,100%,.35)}.vue-photo-zoomer_loading_icon{position:absolute;top:50%;margin:auto;margin-top:-16px;width:32px;height:32px;line-height:100%}.vue-photo-zoomer_image{max-width:100%;max-height:100%}.vue-photo-zoomer_magnifier{cursor:move;left:0;width:40px;height:40px;background:hsla(0,0%,100%,.2) border-box;-webkit-box-shadow:0 0 0 1px hsla(0,0%,100%,.3) inset,0 .5em 1em rgba(0,0,0,.6);box-shadow:inset 0 0 0 1px hsla(0,0%,100%,.3),0 .5em 1em rgba(0,0,0,.6)}.vue-photo-zoomer_magnifier,.vue-photo-zoomer_viewer{position:absolute;top:0;-webkit-box-sizing:border-box;box-sizing:border-box}.vue-photo-zoomer_viewer{overflow:hidden;left:100%;margin-left:20px;border:1px solid #666}", ""]);
+exports.push([module.i, ".vue-photo-zoomer{display:inline-block;position:relative;font-size:0;background-color:#efefef}.vue-photo-zoomer_loading{width:100%;height:100%;position:absolute;top:0;left:0}.vue-photo-zoomer_image{max-width:100%;max-height:100%}.vue-photo-zoomer_magnifier{cursor:move;left:0;width:40px;height:40px;background:hsla(0,0%,100%,.2) border-box;-webkit-box-shadow:0 0 0 1px hsla(0,0%,100%,.3) inset,0 .5em 1em rgba(0,0,0,.6);box-shadow:inset 0 0 0 1px hsla(0,0%,100%,.3),0 .5em 1em rgba(0,0,0,.6)}.vue-photo-zoomer_magnifier,.vue-photo-zoomer_viewer{position:absolute;top:0;-webkit-box-sizing:border-box;box-sizing:border-box}.vue-photo-zoomer_viewer{overflow:hidden;left:100%;margin-left:20px;border:1px solid #666}", ""]);
 // Exports
 module.exports = exports;
 
@@ -1429,13 +1429,6 @@ module.exports = function (key, value) {
 
 /***/ }),
 
-/***/ "cf1c":
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "img/loading.997cb7b9.gif";
-
-/***/ }),
-
 /***/ "d012":
 /***/ (function(module, exports) {
 
@@ -1660,21 +1653,17 @@ if (typeof window !== 'undefined') {
 // Indicate to webpack that this file can be concatenated
 /* harmony default export */ var setPublicPath = (null);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"5a910c0b-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/index.vue?vue&type=template&id=0c5d03f7&
-var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"zoomer",staticClass:"vue-photo-zoomer",on:{"mouseenter":_vm.onMouseenter,"mousemove":_vm.onMousemove,"mouseleave":function($event){_vm.visiable = false}}},[_c('img',{ref:"img",staticClass:"vue-photo-zoomer_image",attrs:{"src":_vm.url},on:{"load":_vm.onLoadImage}}),(_vm.loading)?_c('div',{staticClass:"vue-photo-zoomer_loading"},[_vm._t("loading",[_c('div',{staticClass:"vue-photo-zoomer_loading_x"},[_c('img',{staticClass:"vue-photo-zoomer_loading_icon",attrs:{"src":_vm.loadingIcon}})])])],2):_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.visiable),expression:"visiable"}],ref:"magnifier",staticClass:"vue-photo-zoomer_magnifier",style:(Object.assign({}, _vm.magnifierStyle,
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"4001aee2-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/index.vue?vue&type=template&id=b7ccc1b2&
+var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{ref:"zoomer",staticClass:"vue-photo-zoomer",on:{"mouseenter":_vm.onMouseenter,"mousemove":_vm.onMousemove,"mouseleave":function($event){_vm.visiable = false}}},[_c('img',{ref:"img",staticClass:"vue-photo-zoomer_image",attrs:{"src":_vm.url},on:{"load":_vm.onLoadImage}}),(_vm.loading)?_c('div',{staticClass:"vue-photo-zoomer_loading"},[_vm._t("loading")],2):_vm._e(),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.visiable),expression:"visiable"}],ref:"magnifier",staticClass:"vue-photo-zoomer_magnifier",style:(Object.assign({}, _vm.magnifierStyle,
          _vm.magnifierPos))}),_c('div',{directives:[{name:"show",rawName:"v-show",value:(_vm.visiable),expression:"visiable"}],staticClass:"vue-photo-zoomer_viewer",style:(Object.assign({}, _vm.viewerStyle,
       _vm.viewerSize))},[_c('img',{staticClass:"vue-photo-zoomer_viewer_image",style:(_vm.viewerImgStyle),attrs:{"src":_vm.urlFull || _vm.url}})])])}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/index.vue?vue&type=template&id=0c5d03f7&
+// CONCATENATED MODULE: ./src/index.vue?vue&type=template&id=b7ccc1b2&
 
 // EXTERNAL MODULE: ./node_modules/core-js/modules/es.number.constructor.js
 var es_number_constructor = __webpack_require__("a9e3");
-
-// EXTERNAL MODULE: ./src/assets/loading.gif
-var loading = __webpack_require__("cf1c");
-var loading_default = /*#__PURE__*/__webpack_require__.n(loading);
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--12-0!./node_modules/thread-loader/dist/cjs.js!./node_modules/babel-loader/lib!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/index.vue?vue&type=script&lang=js&
 
@@ -1718,12 +1707,6 @@ var loading_default = /*#__PURE__*/__webpack_require__.n(loading);
 //
 //
 //
-//
-//
-//
-//
-//
-
 /* harmony default export */ var lib_vue_loader_options_srcvue_type_script_lang_js_ = ({
   props: {
     url: {
@@ -1770,10 +1753,16 @@ var loading_default = /*#__PURE__*/__webpack_require__.n(loading);
       magnifierSize: {},
       viewerSize: {},
       viewerImgStyle: {},
+      preMousePos: null,
       unit: 'px',
-      loading: true,
-      loadingIcon: loading_default.a
+      loading: true
     };
+  },
+  mounted: function mounted() {
+    window.addEventListener('resize', this.onResize);
+  },
+  destroyed: function destroyed() {
+    window.removeEventListener('resize', this.onResize);
   },
   methods: {
     setMagnifierPos: function setMagnifierPos(e) {
@@ -1783,6 +1772,10 @@ var loading_default = /*#__PURE__*/__webpack_require__.n(loading);
           scale = this.scale;
       var pageY = this.test ? e._pageY || e.pageY : e.pageY;
       var pageX = this.test ? e._pageX || e.pageX : e.pageX;
+      this.preMousePos = {
+        pageY: pageY,
+        pageX: pageX
+      };
       var top = pageY - zoomerPos.top - magnifierSize.height / 2;
       var left = pageX - zoomerPos.left - magnifierSize.width / 2;
       top = Math.min(Math.max(0, top), zoomerPos.height - magnifierSize.height);
@@ -1801,6 +1794,18 @@ var loading_default = /*#__PURE__*/__webpack_require__.n(loading);
         width: magnifier.width * this.scale + this.unit,
         height: magnifier.height * this.scale + this.unit
       };
+    },
+    setZoomerPos: function setZoomerPos() {
+      var zoomerRect = this.$refs.zoomer.getBoundingClientRect();
+      this.zoomerPos = {
+        height: zoomerRect.height,
+        width: zoomerRect.width,
+        top: zoomerRect.top + window.pageYOffset,
+        left: zoomerRect.left + window.pageXOffset
+      };
+    },
+    onResize: function onResize(e) {
+      this.setZoomerPos();
     },
     onMouseenter: function onMouseenter(e) {
       var _this = this;
@@ -1832,13 +1837,12 @@ var loading_default = /*#__PURE__*/__webpack_require__.n(loading);
       }
     },
     onLoadImage: function onLoadImage() {
-      var zoomerPos = this.$refs.zoomer.getBoundingClientRect();
       var image = this.$refs.img;
       this.loading = false;
-      this.zoomerPos = zoomerPos;
       this.viewerImgStyle.width = image.offsetWidth * this.scale + this.unit;
       this.viewerImgStyle.height = image.offsetHeight * this.scale + this.unit;
       this.viewerSize.background = getComputedStyle(this.$refs.zoomer).background;
+      this.setZoomerPos();
     }
   }
 });
